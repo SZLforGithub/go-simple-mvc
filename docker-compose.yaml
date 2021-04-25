@@ -1,0 +1,14 @@
+version: '2.2'
+
+services: 
+    source:
+        build:
+            context: .
+            dockerfile: ./Dockerfile
+        working_dir: /go/src
+        volumes:
+            - ./src:/go/src
+            - ./pkg:/go/pkg
+        ports:
+            - 8080:8080
+        command: "go run /go/src/main.go"
