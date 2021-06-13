@@ -1,7 +1,7 @@
 package main
 
 import (
-	"go_simple_mvc/routers"
+	"github.com/SZLforGithub/go-simple-mvc/routers"
 )
 
 func main() {

@@ -4,11 +4,10 @@ services:
     source:
         build:
             context: .
-            dockerfile: ./Dockerfile
-        working_dir: /go/src
-        volumes:
-            - ./src:/go/src
-            - ./pkg:/go/pkg
+            dockerfile: ./dockerfile
+        container_name: "go-simple-mvc"
+        working_dir: /go-simple-mvc
+        restart: always
         ports:
             - 8080:8080
-        command: "go run /go/src/main.go"
+        command: "./go-simple-mvc"

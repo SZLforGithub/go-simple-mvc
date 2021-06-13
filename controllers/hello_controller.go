@@ -7,7 +7,6 @@ import (
 )
 
 func GetHello(c *gin.Context) {
-	name := c.Param("name")
+	name := c.DefaultQuery("name", "Guest")
 	c.String(http.StatusOK, "Hello %s!", name)
-	// c.JSON(200, gin.H{"message": "Hello, Gin!"})
 }
