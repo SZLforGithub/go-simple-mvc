@@ -1,13 +1,13 @@
 version: '2.2'
 
-services: 
+services:
   source:
     build:
       context: .
-      dockerfile: ./dockerfile
+      dockerfile: ./dockerfile_multiple_build
     container_name: "go-simple-mvc"
-    working_dir: /go-simple-mvc
+    working_dir: /app
     restart: always
     ports:
       - 8080:8080
-    command: "./go-simple-mvc"
+    command: "./app"
